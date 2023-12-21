@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Heroes from './Heroes'
+import Heroes from './Heroes/page'
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,19 +9,18 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-start z-0 min-h-screen w-full bg-neutral-800">
       <div className="flex flex-row items-center justify-around z-1 w-full h-20 p-0">
-        
-        <a className=''> Главная </a>
-        
-        <Link href='./Heroes'>
-          <a className=''> Герои </a>
+        <Link href='./'>
+          Главная 
         </Link>
-        
-        <a className=''>
+        <Link href='./Heroes'>
+          Герои 
+        </Link>
+        <Link href='./Heroes'>
           Рейтинг
-        </a>
-        <a className=''>
+        </Link>
+        <Link href='./Heroes'>
           Профиль
-        </a>
+        </Link>
       </div>
       
       <div className="flex flex-col items-end justify-center items-center z-1 p-2 w-auto flex-nowrap">
