@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import NewNote from '../New-note';
+// import NewNote from '../New-note';
 
 export const revalidate = 0;
 

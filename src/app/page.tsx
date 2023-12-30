@@ -1,11 +1,20 @@
 import { useState } from 'react'
+import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Heroes from './Heroes/page'
 import Link from 'next/link';
 import React from 'react';
+import Auth from './Auth';
 
 
 export default function Home() {
+  const cookieStore = cookies()
+  const access_token = cookieStore.get('access_token')
+  // if(access_token == null){
+  //   return(
+  //     <Auth/>
+  //   )
+  // }
   return (
     <main className="flex flex-col items-center justify-start z-0 min-h-screen w-full bg-neutral-800">
       <div className="flex flex-row items-center justify-around z-1 w-full h-20 p-0 font-bold">
